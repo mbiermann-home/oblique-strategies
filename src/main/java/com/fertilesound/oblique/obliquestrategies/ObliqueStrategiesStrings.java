@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ObliqueStrategiesStrings {
 
-    private List<String> strategies = new ArrayList();
+    private List<String> strategies = new ArrayList(134);
 
     public ObliqueStrategiesStrings() {
         this.strategies.add("Remove specifics and convert to ambiguities ");
@@ -146,6 +146,6 @@ public class ObliqueStrategiesStrings {
     }
 
     public String getRandomStrategy() {
-        return this.strategies.get(ThreadLocalRandom.current().nextInt(1, this.strategies.size()));
+        return (String)this.strategies.get(ThreadLocalRandom.current().nextInt(1, this.strategies.size()));
     }
 }
